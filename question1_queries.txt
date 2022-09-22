@@ -36,7 +36,7 @@ QUERY 5: ?-authorOf(Z,X), author(Z,Y), not(X=Y), publishedBy(X1,X), publishedBy(
 QUERY 6: ?-authorOf(X,aWildSheepChase), authorOf(X,Y), publicationYear(aWildSheepChase,Z), publicationYear(Y,Z1), Z<Z1.
 
 % Was there a year from 1977 to 1992 that Stephen King did not publish a book?
-QUERY 7: ?-not(authorOf(stephenKing,X), publicationYear(X,Y), Y>1976, Y<1993).
+QUERY 7: 
 
 % Was there an author who published a book in 3 consecutive years sometime after 2005 (possibly including 2005)?
 QUERY 8: ?-authorOf(X,Y),publicationYear(Y,Z1), Z2 is Z1+1, publicationYear(Y,Z2), Z3 is Z2+1, publicationYear(Y,Z3)..
