@@ -2,16 +2,17 @@
 
 member questions (not fixed)
 
-Q1 -> Camillia and Rudaba
+### Q1 
+Camillia and Rudaba
 
-Q2 
-    a -> Rudaba
-    b -> Rudaba
-    c -> Camillia
+### Q2  
+    a -> Rudaba 
+    b -> Rudaba  
+    c -> Camillia  
 
-Q3 
-    a -> Mayra
-    b -> Camillia
-    c -> Camillia and Mayra
-    d -> Mayra
+### Q3 
+    a -> Mayra  
+    b -> Camillia  
+    c -> Camillia and Mayra  
+    d -> Mayra  
 
