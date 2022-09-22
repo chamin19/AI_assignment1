@@ -4,17 +4,17 @@ member questions (not fixed)
 
 ### Q1 
     a,b -> Camillia and Rudaba
-    testing and interaction ->  
+    testing and interaction -> Camillia 
 
 ### Q2  
     a -> Rudaba 
     b -> Rudaba  
-    c -> Camillia 
-    testing and interaction ->   
+    c -> Mayra 
+    testing and interaction -> Rudaba and Mayra  
 
 ### Q3 
     a -> Mayra  
     b -> Camillia  
     c -> Camillia and Mayra  
     d -> Mayra  
-    testing and interaction ->  
+    testing and interaction -> Camillia and Mayra 
