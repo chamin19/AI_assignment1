@@ -13,45 +13,46 @@
 
 %%%%% ATOMIC: authorOf
 % Add the atomic propositions for authorOf in this section
-authorOf(chimamandaNgoziAdichie, halfofaYellowSun).
-authorOf(emilyStJohnMandel, stationEleven).
-authorOf(mordecaiRichler, theApprenticeshipofDuddyKravitz).
-authorOf(mordecaiRichler, barneysVersion).
-authorOf(pauloCoelho,theAlchemist).
-authorOf(pauloCoelho,brida).
-authorOf(harukiMurakami,aWildSheepChase).
-authorOf(harukiMurakami,hearTheWindSing).
-authorOf(harukiMurakami,pinball).
-authorOf(jkrowling,theCuckoosCalling).
-authorOf(jkrowling,theSilkworm).
-authorOf(jkrowling,careerOfEvil).
-authorOf(stephenKing,carrie).
+authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
+authorOf('Emily St. John Mandel', 'Station Eleven').
+authorOf('Mordecai Richler','The Apprenticeship of Duddy Kravitz').
+authorOf('Mordecai Richler','Barneys Version').
+authorOf('Paulo Coelho','The Alchemist').
+authorOf('Paulo Coelho','Brida').
+authorOf('Haruki Murakami','A Wild Sheep Chase').
+authorOf('Haruki Murakami','Hear The Wind Sing').
+authorOf('Haruki Murakami','Pinball').
+authorOf('J. K. Rowling','The Cuckoos Calling').
+authorOf('J. K. Rowling','The Silk Worm').
+authorOf('J. K. Rowling','Career Of Evil').
+authorOf('Stephen King','Carrie').
 
 %%%%%  ATOMIC: publishedBy
 % Add the atomic propositions for publishedBy in this section
-publishedBy(penguin,theAlchemist).
-publishedBy(springerNature,brida).
-publishedBy(randomHouse,theAlchemist).
-publishedBy(harperCollins,brida).
-publishedBy(warnerbors,theCuckoosCalling).
-publishedBy(warnerbros,theSilkworm).
-publishedBy(warnerbros,careerOfEvil).
-publishedBy(warnerbros,carrie).
-publishedBy(macmillanPublishers,carrie).
-publishedBy(harperCollins,carrie).
+publishedBy('Penguin','The Alchemist').
+publishedBy('Springer Nature','Brida').
+publishedBy('Random House','The Alchemist').
+publishedBy('Harper Collins','Brida').
+publishedBy('Warner Bros','The Cuckoos Calling').
+publishedBy('Warner Bros','The Silk Worm').
+publishedBy('Warner Bros','Career Of Evil').
+publishedBy('Warner Bros','Carrie').
+publishedBy('Mac Millan Publishers','Carrie').
+publishedBy('Harper Collins','Carrie').
+
 
 %%%%% ATOMIC: publicationYear
 % Add the atomic propositions for publicationYear in this section
-publicationYear(theAlchemist,2019).
-publicationYear(brida,2019).
-publicationYear(aWildSheepChase,1982).
-publicationYear(hearTheWindSing,1979).
-publicationYear(pinball,1980).
-publicationYear(stationEleven, 1995).
-publicationYear(theCuckoosCalling,2013).
-publicationYear(theSilkworm,2014).
-publicationYear(careerOfEvil,2015).
-publicationYear(carrie,1974).
+publicationYear('The Alchemist',2019).
+publicationYear('Brida',2019).
+publicationYear('A Wild Sheep Chase',1982).
+publicationYear('Hear The Wind Sing',1979).
+publicationYear('Pinball',1980).
+publicationYear('Station Eleven', 1995).
+publicationYear('The Cuckoos Calling',2013).
+publicationYear('The Silk Worm',2014).
+publicationYear('Career Of Evil',2015).
+publicationYear('Carrie',1974).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
