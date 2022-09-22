@@ -52,18 +52,16 @@ lightColour(west, red).
 %%%%% RULE: canGo
 % Add the rules for canGo in this section
 
-% DONE -------------------------------
-% A car can go straight through an intersection.
-canGo(Car, Direction) :- lightColour(Direction, green), facing(Car, Direction).
+% NOT DONE -------------------------------
+% A car can go straight through an intersection or turn right on a green light.
+%   canGo(nissan, east) :- facing(Car,north), lightColour(north,green), reverseDirection(south,north), counterclockwise(south,east) -> yes
+%   canGo(nissan, east) :- facing(Car,north), lightColour(north,green), reverseDirection(south,north), counterclockwise(south,east) -> no
 
-% NOT DONE ---------------------------
-% figure out independently and regroup
-% A car turn right on a green light
 
-% canGo(Car, Direction) :- facing(Car,Direction2), lightColour(Direction2,green), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction), not(clockwise(Direction2,))
-%   canGo(nissan, east) :- facing(Car,north), lightColour(north,green), reverseDirection(south,north), clockwise(south,east) -> yes
-%   canGo(nissan, east) :- facing(Car,south), lightColour(south,green), reverseDirection(north,south), clockwise(north,east) -> no
-
+% not(lightColour(Direction, green), facing(Car, Direction)).
+% not(lightColour(Direction2,green), facing(Car,Direction2), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction)).
+% canGo(Car, Direction) :- not(lightColour(Direction, green), facing(Car, Direction)), not(facing(Car,Direction2), lightColour(Direction2,green), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction)).
+canGo(Car, Direction) :- lightColour(Direction, green), facing(Car, Direction); lightColour(Direction2,green), facing(Car,Direction2), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction), not(Direction=Direction2). 
 
 % DONE -------------------------------
 % A car can turn left on a green light if there is no car that is coming in the opposite direction.
@@ -71,8 +69,8 @@ canGo(Car, Direction) :- lightColour(Direction, green), facing(Car, Direction).
 % direction is turning or not.
 
 % canGo(nissan, west) :- facing(nissan, north), clockwise(north, west), reverseDirection(north, south), not facing(toyota, south), light
-% canGo(Car1, Direction1) :- lightColour(Car1,green), facing(Car1, Direction2), clockwise(Direction2, Direction1), reverseDirection(Direction2, OppositeDirection), not facing(Car2,OppositeDirection).
-canGo(Car,Direction) :- lightColour(Direction2,green), clockwise(Direction2,Direction), reverseDirection(Direction2,OppositeDirection), facing(Car2,OppositeDirection), not(canGo(Car2,OppositeDirection)).
+% canGo(Car1, Direction1) :- lightColour(Car1,green), facing(Car1, Direction2), clockwise(Direction2, Direction1), reverseDirection(Direction2, OppositeDirection), not(facing(Car2,OppositeDirection)).
+canGo(Car,Direction) :- lightColour(Direction2,green), clockwise(Direction2,Direction), reverseDirection(Direction2,OppositeDirection), facing(Car2,OppositeDirection), not (canGo(Car2,OppositeDirection)).
 
 % NOT DONE ---------------------------
 % based on the first part
