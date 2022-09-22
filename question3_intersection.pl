@@ -13,30 +13,31 @@
 
 %%%%% ATOMIC: clockwise
 % Add the atomic propositions for clockwise (part a) in this section
-clockwise(east,north). 
-clockwise(west,south).
-clockwise(south,east). 
-clockwise(north,west).
+clockwise(east, north). 
+clockwise(west, south).
+clockwise(south, east). 
+clockwise(north, west).
 
 %%%%% ATOMIC: counterclockwise
 % Add the atomic propositions for counterclockwise (part a) in this section
-counterclockwise(north,east). 
-counterclockwise(south,west).
-counterclockwise(east,south). 
-counterclockwise(west,north).
+counterclockwise(north, east). 
+counterclockwise(south, west).
+counterclockwise(east, south). 
+counterclockwise(west, north).
 
 %%%%% ATOMIC: reverseDirection
 % Add the atomic propositions for reverseDirection (part a) in this section
-reverseDirection(north,south). 
-reverseDirection(south,north).
-reverseDirection(west,east). 
-reverseDirection(east,west).
+reverseDirection(north, south). 
+reverseDirection(south, north).
+reverseDirection(west, east). 
+reverseDirection(east, west).
 
 %%%%% ATOMIC: facing
 % Add the atomic propositions for facing (part b) in this section
 facing(toyota, south).
 facing(nissan, north).
 facing(chevrolet, east).
+facing(tesla, west).
 
 %%%%% ATOMIC: lightColour
 % Add the atomic propositions for lightColour (part b) in this section
@@ -50,7 +51,42 @@ lightColour(west, red).
 
 %%%%% RULE: canGo
 % Add the rules for canGo in this section
-canGo(Car,Direction) :- lightColour(Direction,green), facing(Car,Direction).
+
+% DONE -------------------------------
+% A car can go straight through an intersection.
+canGo(Car, Direction) :- lightColour(Direction, green), facing(Car, Direction).
+
+% NOT DONE ---------------------------
+% figure out independently and regroup
+% A car turn right on a green light
+
+% canGo(Car, Direction) :- facing(Car,Direction2), lightColour(Direction2,green), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction), not(clockwise(Direction2,))
+%   canGo(nissan, east) :- facing(Car,north), lightColour(north,green), reverseDirection(south,north), clockwise(south,east) -> yes
+%   canGo(nissan, east) :- facing(Car,south), lightColour(south,green), reverseDirection(north,south), clockwise(north,east) -> no
+
+
+% DONE -------------------------------
+% A car can turn left on a green light if there is no car that is coming in the opposite direction.
+% Note that for this assignment, we do not distinguish between if the car coming in the opposite
+% direction is turning or not.
+
+% canGo(nissan, west) :- facing(nissan, north), clockwise(north, west), reverseDirection(north, south), not facing(toyota, south), light
+% canGo(Car1, Direction1) :- lightColour(Car1,green), facing(Car1, Direction2), clockwise(Direction2, Direction1), reverseDirection(Direction2, OppositeDirection), not facing(Car2,OppositeDirection).
+canGo(Car,Direction) :- lightColour(Direction2,green), clockwise(Direction2,Direction), reverseDirection(Direction2,OppositeDirection), facing(Car2,OppositeDirection), not(canGo(Car2,OppositeDirection)).
+
+% NOT DONE ---------------------------
+% based on the first part
+% A car can turn right on a yellow light.
+% canGo(Car, Direction) :- lightColour(Direction2, yellow), clockwise(Direction2, Direction).
+
+% DONE -------------------------------
+% A car can turn left on a yellow light. Note, that we are assuming traffic coming in the opposite
+% direction has stopped when the light is yellow.
+canGo(Car,Direction) :- lightColour(Direction2,yellow), clockwise(Direction2,Direction), reverseDirection(Direction2,OppositeDirection), facing(Car2,OppositeDirection), not(canGo(Car2,OppositeDirection)).
+
+% DONE--------------------------------
+% A car can turn right on a red light, if there is no car coming in on the left that can travel straight (ie. you must yield to oncoming traffic).
+canGo(Car, Direction) :- clockwise(Direction,Direction2), facing(Direction2, red), lightColour(Direction2, red), facing(Car2,Direction), not(canGo(Car2,Direction)).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
