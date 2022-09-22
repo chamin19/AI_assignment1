@@ -3,16 +3,18 @@
 member questions (not fixed)
 
 ### Q1 
-Camillia and Rudaba
+    a,b -> Camillia and Rudaba
+    testing ->  
 
 ### Q2  
     a -> Rudaba 
     b -> Rudaba  
-    c -> Camillia  
+    c -> Camillia 
+    testing ->   
 
 ### Q3 
     a -> Mayra  
     b -> Camillia  
     c -> Camillia and Mayra  
     d -> Mayra  
-
+    testing ->  
