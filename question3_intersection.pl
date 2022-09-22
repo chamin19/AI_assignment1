@@ -13,15 +13,24 @@
 
 %%%%% ATOMIC: clockwise
 % Add the atomic propositions for clockwise (part a) in this section
-
+clockwise(east,north). 
+clockwise(west,south).
+clockwise(south,east). 
+clockwise(north,west).
 
 %%%%% ATOMIC: counterclockwise
 % Add the atomic propositions for counterclockwise (part a) in this section
-
+counterclockwise(north,east). 
+counterclockwise(south,west).
+counterclockwise(east,south). 
+counterclockwise(west,north).
 
 %%%%% ATOMIC: reverseDirection
 % Add the atomic propositions for reverseDirection (part a) in this section
-
+reverseDirection(north,south). 
+reverseDirection(south,north).
+reverseDirection(west,east). 
+reverseDirection(east,west).
 
 %%%%% ATOMIC: facing
 % Add the atomic propositions for facing (part b) in this section
