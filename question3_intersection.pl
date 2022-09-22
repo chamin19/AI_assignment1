@@ -2,9 +2,9 @@
 % If you only have 2 group members, leave the last space blank
 %
 %%%%%
-%%%%% NAME: 
-%%%%% NAME:
-%%%%% NAME:
+%%%%% NAME: Camillia Amin 
+%%%%% NAME: Rudaba Syed
+%%%%% NAME: Mayra Mussarrat
 %
 % Add the required atomic propositions and rules in the corresponding sections. 
 % If you put the propositions and rules in the wrong sections, you may lose marks.
@@ -25,11 +25,16 @@
 
 %%%%% ATOMIC: facing
 % Add the atomic propositions for facing (part b) in this section
-
+facing(toyota, south).
+facing(nissan, north).
+facing(chevrolet, east).
 
 %%%%% ATOMIC: lightColour
 % Add the atomic propositions for lightColour (part b) in this section
-
+lightColour(north, green).
+lightColour(south, green).
+lightColour(east, red).
+lightColour(west, red).
 
 %%%%% ATOMIC: clockwise
 % Add the atomic propositions for clockwise (part a) in this section
