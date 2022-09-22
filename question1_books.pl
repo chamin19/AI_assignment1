@@ -14,7 +14,7 @@
 %%%%% ATOMIC: authorOf
 % Add the atomic propositions for authorOf in this section
 authorOf(chimamandaNgoziAdichie, halfofaYellowSun).
-authorOf(emilySt.JohnMandel, stationEleven).
+authorOf(emilyStJohnMandel, stationEleven).
 authorOf(mordecaiRichler, theApprenticeshipofDuddyKravitz).
 authorOf(mordecaiRichler, barneysVersion).
 authorOf(pauloCoelho,theAlchemist).
