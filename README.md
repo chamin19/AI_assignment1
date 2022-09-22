@@ -1,5 +1,7 @@
 # cps721_A1
 
+member questions (not fixed)
+
 Q1 -> Camillia and Rudaba
 
 Q2 
