@@ -13,23 +13,35 @@
 
 %%%%% ATOMIC: cost
 % Add the atomic propositions for cost in this section
-
+cost(bread,2.00).
+cost(lettuce,2.95).
+cost(apple,5.99).
+cost(chocolate_bar,2.49).
+cost(ginger_ale,2.17).
 
 %%%%%  ATOMIC: twoForOneSale
 % Add the atomic propositions for twoForOneSale in this section
-
+twoForOneSale(bread).
+twoForOneSale(chocolate_bar).
 
 %%%%% ATOMIC: taxable
 % Add the atomic propositions for taxable in this section
+taxable(chocolate_bar).
+taxable(ginger_ale).
 
 
 %%%%% ATOMIC: numPurchased
 % Add the atomic propositions for numPurchased in this section
+numPurchased(bread,3).
+numPurchased(lettuce,2).
+numPurchased(apple,1).
+numPurchased(chocolate_bar,5).
+numPurchased(ginger_ale,2).
 
 
 %%%%% ATOMIC: taxRate
 % Add the atomic propositions for taxRate in this section
-
+taxRate(0.13).
 
 %%%%% RULE: costAfterTax
 % Add the rule(s) for costAfterTax in this section
