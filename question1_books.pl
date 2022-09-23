@@ -31,15 +31,14 @@ authorOf('Stephen King','Carrie').
 % Add the atomic propositions for publishedBy in this section
 publishedBy('Penguin','The Alchemist').
 publishedBy('Springer Nature','Brida').
-publishedBy('Random House','The Alchemist').
-publishedBy('Harper Collins','Brida').
 publishedBy('Warner Bros','The Cuckoos Calling').
 publishedBy('Warner Bros','The Silk Worm').
 publishedBy('Warner Bros','Career Of Evil').
 publishedBy('Warner Bros','Carrie').
 publishedBy('Mac Millan Publishers','Carrie').
 publishedBy('Harper Collins','Carrie').
-
+publishedBy('Penguin','Station Eleven').
+publishedBy('Warner Bros','A Wild Sheep Chase').
 
 %%%%% ATOMIC: publicationYear
 % Add the atomic propositions for publicationYear in this section
