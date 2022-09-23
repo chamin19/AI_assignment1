@@ -48,8 +48,10 @@ taxRate(0.13).
 costAfterTax(Item, AfterTax) :- cost(Item,P), \+ taxable(Item), AfterTax is P.
 costAfterTax(Item, AfterTax) :- cost(Item,P), taxable(Item), taxRate(Rate), AfterTax is P*(1+Rate).
 
-%%%%% RULE: costAfterTaxAndSale
+%%%%% RULE: costAfterTaxAndSale NOT DONE YET
 % Add the rule(s) for costAfterTaxAndSale in this section
+costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), numPurchased(Item,N), \+ taxable(Item), \+twoForOneSale(Item), AfterSaleAndTax is P*N. 
+costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), \+ taxable(Item), twoForOneSale(Item), numPurchased(Item,N), N>1, AfterSaleAndTax is (P*N)/2.
 
 
 %%%%% RULE: totalCost
