@@ -45,7 +45,8 @@ taxRate(0.13).
 
 %%%%% RULE: costAfterTax
 % Add the rule(s) for costAfterTax in this section
-
+costAfterTax(Item, AfterTax) :- cost(Item,P), \+ taxable(Item), AfterTax is P.
+costAfterTax(Item, AfterTax) :- cost(Item,P), taxable(Item), taxRate(Rate), AfterTax is P*(1+Rate).
 
 %%%%% RULE: costAfterTaxAndSale
 % Add the rule(s) for costAfterTaxAndSale in this section
