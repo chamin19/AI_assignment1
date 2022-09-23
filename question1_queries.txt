@@ -19,42 +19,42 @@
 
 % DONE ----------
 % Did Chimamanda Ngozi Adichie write "Half of a Yellow Sun"?
-QUERY 1: ?-authorOf(chimamandaNgoziAdichie, halfofaYellowSun).
+QUERY 1: ?-authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
 
 % DONE ----------
 % Who published "Station Eleven"?
-QUERY 2: ?-publishedBy(X,stationEleven).
+QUERY 2: ?-publishedBy(X,'Station Eleven').
 
 % DONE ----------
 % Did the same author write both "The Apprenticeship of Duddy Kravitz" and "Barney's Version", and if so, who was it?
-QUERY 3: ?-authorOf(X,theApprenticeshipofDuddyKravitz),authorOf(X,barneysVersion).
+QUERY 3: ?-authorOf(X,'The Apprenticeship of Duddy Kravitz'),authorOf(X,'Barneys Version').
 
 % NOT DONE - incorrect ----------
 % Was there a book published in 2019 that was not published by Random House or Harper Collins? 
-QUERY 4: ?-not(publishedBy(harperCollins,X), publicationYear(X,2019)) ; not(publishedBy(randomHouse,Y),publicationYear(Y,2019)).
+QUERY 4: ?-not(publishedBy('Harper Collins',X), publicationYear(X,2019)) ; not(publishedBy('Random House',Y),publicationYear(Y,2019)).
 
-% DONE - revise (two possible returns) ----------
+% DONE ----------
 % Did any author write at least two different books, each with a different publisher?
 QUERY 5: ?-authorOf(Z,X), authorOf(Z,Y), not(X=Y), publishedBy(X1,X), publishedBy(Y1,Y), not(X1=Y1).
 
 % NOT DONE -----------
 % Did the author of "A Wild Sheep Chase" write any books before that one?
-QUERY 6: ?-authorOf(X,aWildSheepChase), authorOf(X,Y), publicationYear(aWildSheepChase,Z), publicationYear(Y,Z1), Z<Z1.
+QUERY 6: ?-authorOf(X,aWildSheepChase), authorOf(X,Y), publicationYear('A Wild Sheep Chase',Z), publicationYear(Y,Z1), Z<Z1.
 
 % Was there a year from 1977 to 1992 that Stephen King did not publish a book?
 QUERY 7: 
 
-% DONE - revise multple returns -----------
+% DONE -----------
 % Was there an author who published a book in 3 consecutive years sometime after 2005 (possibly including 2005)?
 QUERY 8: ?-authorOf(X,Y1),publicationYear(Y1,Z1), Z1>2005, Z2 is Z1+1, publicationYear(Y2,Z2), not(Y1=Y2), Z3 is Z2+1, publicationYear(Y3,Z3), not(Y2=Y3), not(Y1=Y3).
 
 % NOT DONE -----------
 % Did any publisher only publish exactly one book in 1995?
-% QUERY 9: ?-publishedBy(Publisher,Book), publicationYear(Y,Z).
+% QUERY 9: ?-publishedBy(Publisher,Book), publicationYear(Book, 1995), publishedBy(Publisher,Book2), publicationYear(Book2, Year), not(Book=Book2).
 
 % NOT DONE - convert or to demorgans -----------
 % What was the earliest year that Macmillan Publishers published a book in? 
-% QUERY 10: ?-publishedBy(macmillanPublishers,Book1), publicationYear(Book1,Year), (publishedBy(macmillanPublishers,Book2), not(Book1=Book2), publicationYear(Book2,Year2), Year2 < Year, EarliestYear is Year2; EarliestYear is Year).
+% QUERY 10: ?-publishedBy('Macmillan Publishers',Book1), publicationYear(Book1,Year), (publishedBy('Macmillan Publishers',Book2), not(Book1=Book2), publicationYear(Book2,Year2), Year2 < Year, EarliestYear is Year2; EarliestYear is Year).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
