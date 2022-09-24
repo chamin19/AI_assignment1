@@ -3,7 +3,8 @@
 member questions (not fixed)
 
 ### Q1 
-    a,b -> Camillia and Rudaba
+    a -> Camillia and Rudaba
+    b -> Camillia 
     testing and interaction -> Camillia 
 
 ### Q2  
