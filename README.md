@@ -10,7 +10,7 @@ member questions (not fixed)
 ### Q2  
     a -> Rudaba 
     b -> Rudaba  
-    c -> Mayra 
+    c -> Rudaba and Mayra 
     testing and interaction -> Rudaba and Mayra  
 
 ### Q3 
