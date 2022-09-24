@@ -16,19 +16,19 @@
 % Don't forget to end queries with a period.
 
 % Query description
-QUERY 1: .
+QUERY 1: costAfterTax(ginger_ale, AfterTax).
 
 % Query description
-QUERY 2: .
+QUERY 2: costAfterTax(apple, AfterTax).
 
 % Query description
-QUERY 3: .
+QUERY 3: costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
 
 % Query description
-QUERY 4: .
+QUERY 4: costAfterTaxAndSale(bread, AfterSaleAndTax).
 
 % Query description
-QUERY 5: .
+QUERY 5: totalCost(Cost).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
