@@ -13,7 +13,7 @@
 
 %%%%% ATOMIC: cost
 % Add the atomic propositions for cost in this section
-cost(bread,2.00).
+cost(bread,2.75).
 cost(lettuce,2.95).
 cost(apple,5.99).
 cost(chocolate_bar,2.49).
@@ -32,9 +32,9 @@ taxable(ginger_ale).
 
 %%%%% ATOMIC: numPurchased
 % Add the atomic propositions for numPurchased in this section
-numPurchased(bread,3).
-numPurchased(lettuce,2).
-numPurchased(apple,1).
+numPurchased(bread,4).
+numPurchased(lettuce,3).
+numPurchased(apple,2).
 numPurchased(chocolate_bar,5).
 numPurchased(ginger_ale,2).
 
