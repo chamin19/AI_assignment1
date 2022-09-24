@@ -8,29 +8,32 @@
 %
 % Add your interaction below
 
+
 QUERY 1: costAfterTax(apple, AfterTax).
 ?- costAfterTax(apple, AfterTax).
-AfterTax = 5.99
+AfterTax = 5.5
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
 
 QUERY 2: costAfterTax(ginger_ale, AfterTax).
 ?- costAfterTax(ginger_ale, AfterTax).
-AfterTax = 2.4520999999999997
+AfterTax = 2.2
 Yes (0.00s cpu)
 
 QUERY 3: costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
 ?- costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
-AfterSaleAndTax = 8.4411
+AfterSaleAndTax = 4.95
 Yes (0.00s cpu)
 
 QUERY 4: costAfterTaxAndSale(bread, AfterSaleAndTax).
 ?- costAfterTaxAndSale(bread, AfterSaleAndTax).
-AfterSaleAndTax = 5.5
+AfterSaleAndTax = 4.5
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
 
 QUERY 5: totalCost(Cost).
-Cost = 39.675300000000007
+?- totalCost(Cost).
+Cost = 32.35
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
+
