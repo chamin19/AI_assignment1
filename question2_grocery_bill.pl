@@ -45,19 +45,19 @@ taxRate(0.10).
 
 %%%%% RULE: costAfterTax
 % Add the rule(s) for costAfterTax in this section
-costAfterTax(Item, AfterTax) :- cost(Item,P), \+ taxable(Item), AfterTax is P.
+costAfterTax(Item, AfterTax) :- cost(Item,P), not(taxable(Item)), AfterTax is P.
 costAfterTax(Item, AfterTax) :- cost(Item,P), taxable(Item), taxRate(Rate), AfterTax is P*(1+Rate).
 
 %%%%% RULE: costAfterTaxAndSale NOT DONE YET
 % Add the rule(s) for costAfterTaxAndSale in this section
 % calculates cost for non taxable and non sale items
-costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), numPurchased(Item,N), \+ taxable(Item), \+twoForOneSale(Item), AfterSaleAndTax is P*N. 
+costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), numPurchased(Item,N), not(taxable(Item)), not(twoForOneSale(Item)), AfterSaleAndTax is P*N. 
 % calculates cost for non taxable, on sale and even quantity items
-costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), \+ taxable(Item), twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, E is N1 mod 2, E =:= 0, AfterSaleAndTax is P*(N/2).
+costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), not(taxable(Item)), twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, E is N1 mod 2, E =:= 0, AfterSaleAndTax is P*(N/2).
 % calculates cost for non taxable, on sale and odd quantity items
-costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), \+ taxable(Item), twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, O is N1 mod 2, O =:= 1, AfterSaleAndTax is P*((N+1)/2).
+costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), not(taxable(Item)), twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, O is N1 mod 2, O =:= 1, AfterSaleAndTax is P*((N+1)/2).
 % calculates cost for taxable, on sale items
-costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), taxable(Item), taxRate(Rate), \+ twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, AfterSaleAndTax is ((P*N)*(1+Rate)).
+costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), taxable(Item), taxRate(Rate), not(twoForOneSale(Item)), numPurchased(Item,N), N1 is N, N1>1, AfterSaleAndTax is ((P*N)*(1+Rate)).
 % calculates cost for taxable, on sale and even quantity items
 costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), taxable(Item), taxRate(Rate), twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, E is N1 mod 2, E =:= 0, AfterSaleAndTax is ((P*(N/2))*(1+Rate)).
 % calculates cost for taxable, on sale and odd quantity items
