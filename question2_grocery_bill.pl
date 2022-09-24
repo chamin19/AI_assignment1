@@ -60,7 +60,7 @@ costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), \+ taxable(Item), tw
 costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), taxable(Item), taxRate(Rate), \+ twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, AfterSaleAndTax is ((P*N)*(1+Rate)).
 %(taxable, BOGO, E)
 costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), \+ taxable(Item), taxRate(Rate), twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, E is N1 mod 2, E =:= 0, AfterSaleAndTax is ((P*(N/2))*(1+Rate)).
-%(taxable, BOGO, O)
+%(taxable, BOGO, O) ***NEEDS DEBUGGING
 costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), \+ taxable(Item), taxRate(Rate), twoForOneSale(Item), numPurchased(Item,N), N1 is N, N1>1, O is N1 mod 2, O =:= 1, AfterSaleAndTax is ((P*((N+1)/2))*(1+Rate)).
 
 
