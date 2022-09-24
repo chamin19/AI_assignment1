@@ -66,7 +66,7 @@ costAfterTaxAndSale(Item, AfterSaleAndTax) :- cost(Item,P), taxable(Item), taxRa
 
 %%%%% RULE: totalCost
 %  Add the rule(s) for totalCost in this section
-
+totalCost(Cost) :- costAfterTaxAndSale(bread, AST1), costAfterTaxAndSale(lettuce, AST2), costAfterTaxAndSale(apple, AST3), costAfterTaxAndSale(chocolate_bar, AST4), costAfterTaxAndSale(ginger_ale, AST5), Cost is (AST1+AST2+AST3+AST4+AST5).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
