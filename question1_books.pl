@@ -26,6 +26,8 @@ authorOf('J. K. Rowling','The Cuckoos Calling').
 authorOf('J. K. Rowling','The Silk Worm').
 authorOf('J. K. Rowling','Career Of Evil').
 authorOf('Stephen King','Carrie').
+authorOf('Stephen Hawking','Universe Theory').
+authorOf('Joe Miller','Sad Moments').
 
 %%%%%  ATOMIC: publishedBy
 % Add the atomic propositions for publishedBy in this section
@@ -41,6 +43,8 @@ publishedBy('Mac Millan Publishers','The Apprenticeship of Duddy Kravitz').
 publishedBy('Harper Collins','Carrie').
 publishedBy('Penguin','Station Eleven').
 publishedBy('Warner Bros','A Wild Sheep Chase').
+publishedBy('Mac Millan Publishers','Sad Moments').
+publishedBy('Harper Collins','Carrie').
 
 %%%%% ATOMIC: publicationYear
 % Add the atomic propositions for publicationYear in this section
@@ -56,6 +60,8 @@ publicationYear('Career Of Evil',2015).
 publicationYear('Carrie',1974).
 publicationYear('Barneys Version',1995).
 publicationYear('The Apprenticeship of Duddy Kravitz',101).
+publicationYear('Universe Theory',1977).
+publicationYear('Sad Moments',1980).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
