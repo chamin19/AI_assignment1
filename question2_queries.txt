@@ -15,19 +15,19 @@
 % where 2 is the number of the query. Omit the "%" on the QUERY line below.
 % Don't forget to end queries with a period.
 
-% Query description: calculates cost of a non taxable item
+% Calculates cost of a non taxable item
 QUERY 1: costAfterTax(apple, AfterTax).
 
-% Query description: calculates cost of a taxable item
+% Calculates cost of a taxable item
 QUERY 2: costAfterTax(ginger_ale, AfterTax).
 
-% Query description: calculates cost of a taxable item on sale
+% Calculates cost of a taxable item on sale
 QUERY 3: costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
 
-% Query description: calculates cost of an item on sale
+% Calculates cost of an item on sale
 QUERY 4: costAfterTaxAndSale(bread, AfterSaleAndTax).
 
-% Query description: calculates total bill of the grocery shopping 
+% Calculates total bill of the grocery shopping 
 QUERY 5: totalCost(Cost).
 
 %%%%% END
