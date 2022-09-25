@@ -53,8 +53,10 @@ lightColour(west, red).
 
 % DONE -------------------------------
 % A car can go straight through an intersection or turn right on a green light.
-canGo(Car,Direction) :- lightColour(Direction,green), facing(Car, Direction).
-canGo(Car,Direction) :- lightColour(Direction2,green), facing(Car,Direction2), clockwise(Direction,Direction2).
+% canGo(Car,Direction) :- lightColour(Direction,green), facing(Car, Direction).
+% canGo(Car,Direction) :- lightColour(Direction2,green), facing(Car,Direction2), clockwise(Direction,Direction2).
+
+canGo(Car,Direction) :- lightColour(Direction,green), facing(Car, Direction) ; lightColour(Direction2,green), facing(Car,Direction2), clockwise(Direction,Direction2).
 
 % canGo(Car,Direction) :- \+ ((\+ (lightColour(Direction, green), facing(Car, Direction))), (\+ (lightColour(Direction2,green), facing(Car,Direction2), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction), not(Direction=Direction2)))).
 
