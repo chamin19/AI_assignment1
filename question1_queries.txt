@@ -31,7 +31,7 @@ QUERY 3: ?-authorOf(X,'The Apprenticeship of Duddy Kravitz'),authorOf(X,'Barneys
 
 % DONE ----------
 % Was there a book published in 2019 that was not published by Random House or Harper Collins? 
-QUERY 4: ?-publicationYear(X,2019), publicationYear(Y,2019), (\+ (publishedBy('Harper Collins',X), publishedBy('Random House',Y))).
+QUERY 4: ?-publicationYear(Book,2019),publishedBy(Publisher,Book), not (Publisher = 'Random House'), not (Publisher = 'Harper Collins').
 
 % DONE ----------
 % Did any author write at least two different books, each with a different publisher?

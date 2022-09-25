@@ -25,7 +25,7 @@ Yes (0.00s cpu)
 % output:
 
 % QUERY 4 ---------- 
-% input: publicationYear(X,2019), publicationYear(Y,2019), (\+ (publishedBy('Harper Collins',X), publishedBy('Random House',Y))).
+% input: publicationYear(Book,2019),publishedBy(Publisher,Book), not (Publisher = 'Random House'), not (Publisher = 'Harper Collins').
 % output:
 
 % QUERY 5 ---------- 
