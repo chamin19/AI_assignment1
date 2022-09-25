@@ -18,7 +18,7 @@
 % Query description: calculates cost of a non taxable item
 QUERY 1: costAfterTax(apple, AfterTax).
 
-% Query description: calculates cost a taxable item
+% Query description: calculates cost of a taxable item
 QUERY 2: costAfterTax(ginger_ale, AfterTax).
 
 % Query description: calculates cost of a taxable item on sale
