@@ -9,30 +9,31 @@
 % Add your interaction below
 
 
-QUERY 1: costAfterTax(apple, AfterTax).
-?- costAfterTax(apple, AfterTax).
+
+% input: costAfterTax(apple, AfterTax).
+% output:
 AfterTax = 5.5
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
 
-QUERY 2: costAfterTax(ginger_ale, AfterTax).
-?- costAfterTax(ginger_ale, AfterTax).
+% input: costAfterTax(ginger_ale, AfterTax).
+% output:
 AfterTax = 2.2
 Yes (0.00s cpu)
 
-QUERY 3: costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
-?- costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
+% input: costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
+% output:
 AfterSaleAndTax = 4.95
 Yes (0.00s cpu)
 
-QUERY 4: costAfterTaxAndSale(bread, AfterSaleAndTax).
-?- costAfterTaxAndSale(bread, AfterSaleAndTax).
+% input: costAfterTaxAndSale(bread, AfterSaleAndTax).
+% output:
 AfterSaleAndTax = 4.5
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
 
-QUERY 5: totalCost(Cost).
-?- totalCost(Cost).
+% input: totalCost(Cost).
+% output:
 Cost = 32.35
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)

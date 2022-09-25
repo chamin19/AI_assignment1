@@ -41,6 +41,7 @@ publishedBy('Mac Millan Publishers','The Apprenticeship of Duddy Kravitz').
 publishedBy('Harper Collins','Carrie').
 publishedBy('Penguin','Station Eleven').
 publishedBy('Warner Bros','A Wild Sheep Chase').
+publishedBy('Harper Collins','Carrie').
 
 %%%%% ATOMIC: publicationYear
 % Add the atomic propositions for publicationYear in this section
@@ -55,7 +56,7 @@ publicationYear('The Silk Worm',2014).
 publicationYear('Career Of Evil',2015).
 publicationYear('Carrie',1974).
 publicationYear('Barneys Version',1995).
-publicationYear('The Apprenticeship of Duddy Kravitz',101).
+publicationYear('The Apprenticeship of Duddy Kravitz',1977).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW

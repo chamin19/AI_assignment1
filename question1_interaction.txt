@@ -9,40 +9,85 @@
 % Add your interaction below
 
 % QUERY 1 ---------- 
-% input:
-authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
-
+% input: authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
 % output:
-?- authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
 Yes (0.00s cpu)
 
 % QUERY 2 ---------- 
-% input: publishedBy(X,'Station Eleven').
+% input: publishedBy(Publisher,'Station Eleven').
 % output:
+Publisher = 'Penguin'
+Yes (0.00s cpu)
 
 % QUERY 3 ---------- 
-% input: authorOf(X,'The Apprenticeship of Duddy Kravitz'),authorOf(X,'Barneys Version').
+% input: authorOf(Author,'The Apprenticeship of Duddy Kravitz'),authorOf(Author,'Barneys Version').
 % output:
+Author = 'Mordecai Richler'
+Yes (0.00s cpu)
 
 % QUERY 4 ---------- 
+<<<<<<< HEAD
 % input: publicationYear(Book,2019),publishedBy(Publisher,Book), not (Publisher = 'Random House'), not (Publisher = 'Harper Collins').
+=======
+% input: publicationYear(Book, 2019), publishedBy(Publisher, Book), not Publisher = 'Random House', not Publisher = 'Harper Collins'.
+>>>>>>> b569b30bbf8f0358b8a49b15b242ff58bd29b31b
 % output:
+Book = 'The Alchemist'
+Publisher = 'Penguin'
+Yes (0.00s cpu, solution 1, maybe more)
+Book = 'Brida'
+Publisher = 'Springer Nature'
+Yes (0.00s cpu, solution 2)
 
 % QUERY 5 ---------- 
-% input: authorOf(Z,X), authorOf(Z,Y), not(X=Y), publishedBy(X1,X), publishedBy(Y1,Y), not(X1=Y1).
+% input: authorOf(Author, Book1), authorOf(Author, Book2), not (Book1 = Book2), publishedBy(Publisher1, Book1), publishedBy(Publisher2, Book2), not (Publisher1 = Publisher2).
 % output:
+Author = 'Paulo Coelho'
+Book1 = 'The Alchemist'
+Book2 = 'Brida'
+Publisher1 = 'Penguin'
+Publisher2 = 'Springer Nature'
+Yes (0.00s cpu, solution 1, maybe more)
+Author = 'Paulo Coelho'
+Book1 = 'Brida'
+Book2 = 'The Alchemist'
+Publisher1 = 'Springer Nature'
+Publisher2 = 'Penguin'
+Yes (0.00s cpu, solution 2, maybe more)
+No (0.00s cpu)
+
 
 % QUERY 6 ---------- 
-% input: authorOf(Author,'A Wild Sheep Chase'), publicationYear('A Wild Sheep Chase',Year), authorOf(Author,Book2), publicationYear(Book2,Year2), Year2 < Year.
+% input: authorOf(Author, 'A Wild Sheep Chase'), publicationYear('A Wild Sheep Chase', Year), authorOf(Author, Book2), publicationYear(Book2, Earlier_Year), Earlier_Year < Year.
 % output:
+Author = 'Haruki Murakami'
+Year = 1982
+Book2 = 'Hear The Wind Sing'
+Earlier_Year = 1979
+Yes (0.00s cpu, solution 1, maybe more)
+Author = 'Haruki Murakami'
+Year = 1982
+Book2 = 'Pinball'
+Earlier_Year = 1980
+Yes (0.00s cpu, solution 2)
 
 % QUERY 8 ---------- 
-% input: authorOf(X,Y1),publicationYear(Y1,Z1), Z1>2005, Z2 is Z1+1, publicationYear(Y2,Z2), not(Y1=Y2), Z3 is Z2+1, publicationYear(Y3,Z3), not(Y2=Y3), not(Y1=Y3).
+% input: authorOf(Author, B1), publicationYear(B1, Y1), Y1 >= 2005, Y2 is Y1 + 1, publicationYear(B2, Y2), not B1 = B2, Y3 is Y2 + 1, publicationYear(B3, Y3), not B2 = B3, not B1 = B3.
 % output:
+Author = 'J. K. Rowling'
+B1 = 'The Cuckoos Calling'
+Y1 = 2013
+Y2 = 2014
+B2 = 'The Silk Worm'
+Y3 = 2015
+B3 = 'Career Of Evil'
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.03s cpu)
 
 % QUERY 9 ---------- 
-% input: publishedBy(Publisher, Book), publicationYear(Book, 1995), publishedBy(Publisher, Book2), publicationYear(Book2, 1995), (not Book = Book2 ; Book = Book2).
+% input: publishedBy(Publisher, Book), publicationYear(Book, 1995), publishedBy(Publisher, Book2), publicationYear(Book2, 1995), not Book = Book2.
 % output:
+No (0.00s cpu)
 
 % QUERY 10 ---------- 
 % input:
