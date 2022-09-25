@@ -18,19 +18,19 @@
 % Camillia
 % Can any car make a left or right turn on a yellow light? 
 % ANS: none can make a left or right turn on a yellow.
-QUERY 1: ?-facing(Car,Direction), lightColour(Direction, yellow), clockwise(Direction,DirectionOfLeftTurn), clockwise(DirectionofRightTurn,Direction), not( not(canGo(Car, DirectionOfLeftTurn)), not(canGo(Car, DirectionofRightTurn)) ).
+QUERY 1: ?-facing(Car,Direction), lightColour(Direction, yellow), clockwise(Direction,DirectionOfLeftTurn), clockwise(DirectionOfRightTurn,Direction), not( not(canGo(Car, DirectionOfLeftTurn)), not(canGo(Car, DirectionOfRightTurn)) ).
 
 % Which car is facing a green light but is unable to make a left turn? 
-% ANS: nissan, toyota - not returning expected output
-QUERY 2: ?-facing(Car,Direction), lightColour(Direction,green), clockwise(Direction,DirectionofLeftTurn), not(canGo(Car,DirectionOfLeftTurn)).
+% ANS: nissan, toyota 
+QUERY 2: ?-facing(Car, Direction), lightColour(Direction, green), clockwise(Direction, DirectionOfLeftTurn), not(canGo(Car, DirectionOfLeftTurn)).
 
 % Is there a car that can neither go left, right, nor straight?
 % ANS: yes, chevrolet
-QUERY 3: ?-facing(Car,Direction), clockwise(DirectionOfRightTurn,Direction), clockwise(Direction,DirectionofLeftTurn), not(canGo(Car,DirectionOfRightTurn)), not(canGo(Car,DirectionofLeftTurn)), not(canGo(Car,Direction)).
+QUERY 3: ?-facing(Car,Direction), clockwise(DirectionOfRightTurn,Direction), clockwise(Direction,DirectionOfLeftTurn), not(canGo(Car,DirectionOfRightTurn)), not(canGo(Car,DirectionOfLeftTurn)), not(canGo(Car,Direction)).
 
 % Is there a car that can make a right turn but not go straight through an intersection? 
 % ANS: no 
-QUERY 4: ?-facing(Car,Direction), clockwise(DirectionofRightTurn,Direction), canGo(Car,DirectionOfRightTurn), not(canGo(Car,Direction)).
+QUERY 4: ?-facing(Car,Direction), clockwise(DirectionOfRightTurn,Direction), canGo(Car,DirectionOfRightTurn), not(canGo(Car,Direction)).
 
 % 
 QUERY 5: .
