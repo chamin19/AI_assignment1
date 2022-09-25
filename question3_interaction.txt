@@ -7,3 +7,63 @@
 %%%%% NAME: Mayra Mussarrat
 %
 % Add your interaction below
+
+% QUERY 1 ---------- 
+% input: 
+facing(Car,Direction), lightColour(Direction, yellow), clockwise(Direction,DirectionOfLeftTurn), clockwise(DirectionOfRightTurn,Direction), not( not(canGo(Car, DirectionOfLeftTurn)), not(canGo(Car, DirectionOfRightTurn)) ).
+
+% output: 
+?- facing(Car, Direction), lightColour(Direction, yellow), clockwise(Direction, DirectionOfLeftTurn), clockwise(DirectionOfRightTurn, Direction), not(not canGo(Car, DirectionOfLeftTurn), not canGo(Car, DirectionOfRightTurn)).
+No (0.00s cpu)
+
+
+% QUERY 2 ---------- 
+% input: 
+facing(Car, Direction), lightColour(Direction, green), clockwise(Direction, DirectionOfLeftTurn), not(canGo(Car, DirectionOfLeftTurn)).
+
+
+% output:
+?- facing(Car, Direction), lightColour(Direction, green), clockwise(Direction, DirectionOfLeftTurn), not canGo(Car, DirectionOfLeftTurn).
+Car = toyota
+Direction = south
+DirectionOfLeftTurn = east
+Yes (0.00s cpu, solution 1, maybe more)
+Car = nissan
+Direction = north
+DirectionOfLeftTurn = west
+Yes (0.00s cpu, solution 2, maybe more)
+No (0.00s cpu)
+
+
+% QUERY 3 ---------- 
+% input: 
+facing(Car,Direction), clockwise(DirectionOfRightTurn,Direction), clockwise(Direction,DirectionOfLeftTurn), not(canGo(Car,DirectionOfRightTurn)), not(canGo(Car,DirectionOfLeftTurn)), not(canGo(Car,Direction)).
+
+% output:
+?- facing(Car, Direction), clockwise(DirectionOfRightTurn, Direction), clockwise(Direction, DirectionOfLeftTurn), not canGo(Car, DirectionOfRightTurn), not canGo(Car, DirectionOfLeftTurn), not canGo(Car, Direction).
+Car = chevrolet
+Direction = east
+DirectionOfRightTurn = south
+DirectionOfLeftTurn = north
+Yes (0.00s cpu)
+
+
+% QUERY 4 ---------- 
+% input: 
+facing(Car,Direction), clockwise(DirectionOfRightTurn,Direction), canGo(Car,DirectionOfRightTurn), not(canGo(Car,Direction)).
+
+% output:
+?- facing(Car, Direction), clockwise(DirectionOfRightTurn, Direction), canGo(Car, DirectionOfRightTurn), not canGo(Car, Direction).
+No (0.00s cpu)
+
+
+% QUERY 5 ---------- 
+% input: 
+facing(Car,Direction), lightColour(Direction,red), clockwise(DirectionOfRightTurn,Direction), not(canGo(Car,DirectionOfRightTurn)).
+
+% output:
+?- facing(Car, Direction), lightColour(Direction, red), clockwise(DirectionOfRightTurn, Direction), not canGo(Car, DirectionOfRightTurn).
+Car = chevrolet
+Direction = east
+DirectionOfRightTurn = south
+Yes (0.00s cpu)
