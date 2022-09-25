@@ -35,7 +35,9 @@ publishedBy('Warner Bros','The Cuckoos Calling').
 publishedBy('Warner Bros','The Silk Worm').
 publishedBy('Warner Bros','Career Of Evil').
 publishedBy('Warner Bros','Carrie').
+publishedBy('Mac Millan Publishers','Barneys Version').
 publishedBy('Mac Millan Publishers','Carrie').
+publishedBy('Mac Millan Publishers','The Apprenticeship of Duddy Kravitz').
 publishedBy('Harper Collins','Carrie').
 publishedBy('Penguin','Station Eleven').
 publishedBy('Warner Bros','A Wild Sheep Chase').
@@ -52,6 +54,8 @@ publicationYear('The Cuckoos Calling',2013).
 publicationYear('The Silk Worm',2014).
 publicationYear('Career Of Evil',2015).
 publicationYear('Carrie',1974).
+publicationYear('Barneys Version',1995).
+publicationYear('The Apprenticeship of Duddy Kravitz',101).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW

@@ -29,9 +29,9 @@ QUERY 2: ?-publishedBy(X,'Station Eleven').
 % Did the same author write both "The Apprenticeship of Duddy Kravitz" and "Barney's Version", and if so, who was it?
 QUERY 3: ?-authorOf(X,'The Apprenticeship of Duddy Kravitz'),authorOf(X,'Barneys Version').
 
-% NOT DONE - convert or to demorgans ----------
+% DONE ----------
 % Was there a book published in 2019 that was not published by Random House or Harper Collins? 
-QUERY 4: ?-publicationYear(X,2019), not(publishedBy('Harper Collins',X)) ; publicationYear(Y,2019), not(publishedBy('Random House',Y)).
+QUERY 4: ?-publicationYear(X,2019), publicationYear(Y,2019), (\+ (publishedBy('Harper Collins',X), publishedBy('Random House',Y))).
 
 % DONE ----------
 % Did any author write at least two different books, each with a different publisher?
@@ -52,9 +52,9 @@ QUERY 8: ?-authorOf(X,Y1),publicationYear(Y1,Z1), Z1>2005, Z2 is Z1+1, publicati
 % Did any publisher only publish exactly one book in 1995?
 QUERY 9: ?-publishedBy(Publisher, Book), publicationYear(Book, 1995), publishedBy(Publisher, Book2), publicationYear(Book2, 1995), (not Book = Book2 ; Book = Book2).
 
-% NOT DONE - convert or to demorgans -----------
-% What was the earliest year that Macmillan Publishers published a book in? 
-QUERY 10: ?-publishedBy('Macmillan Publishers',Book1), publicationYear(Book1,Year), (publishedBy('Macmillan Publishers',Book2), not(Book1=Book2), publicationYear(Book2,Year2), Year2 < Year, EarliestYear is Year2; EarliestYear is Year).
+% NOT DONE - WRONG -----------
+% What was the earliest year that Mac Millan Publishers published a book in? 
+QUERY 10: ?-publishedBy('Mac Millan Publishers',Book1), publicationYear(Book1,Year), (publishedBy('Mac Millan Publishers',Book2), not(Book1=Book2), publicationYear(Book2,Year2), Year2 < Year, EarliestYear is Year2; EarliestYear is Year).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW

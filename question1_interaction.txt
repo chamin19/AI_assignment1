@@ -7,3 +7,43 @@
 %%%%% NAME: Mayra Mussarrat
 %
 % Add your interaction below
+
+% QUERY 1 ---------- 
+% input:
+authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
+
+% output:
+?- authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
+Yes (0.00s cpu)
+
+% QUERY 2 ---------- 
+% input: publishedBy(X,'Station Eleven').
+% output:
+
+% QUERY 3 ---------- 
+% input: authorOf(X,'The Apprenticeship of Duddy Kravitz'),authorOf(X,'Barneys Version').
+% output:
+
+% QUERY 4 ---------- 
+% input: publicationYear(X,2019), publicationYear(Y,2019), (\+ (publishedBy('Harper Collins',X), publishedBy('Random House',Y))).
+% output:
+
+% QUERY 5 ---------- 
+% input: authorOf(Z,X), authorOf(Z,Y), not(X=Y), publishedBy(X1,X), publishedBy(Y1,Y), not(X1=Y1).
+% output:
+
+% QUERY 6 ---------- 
+% input: authorOf(Author,'A Wild Sheep Chase'), publicationYear('A Wild Sheep Chase',Year), authorOf(Author,Book2), publicationYear(Book2,Year2), Year2 < Year.
+% output:
+
+% QUERY 8 ---------- 
+% input: authorOf(X,Y1),publicationYear(Y1,Z1), Z1>2005, Z2 is Z1+1, publicationYear(Y2,Z2), not(Y1=Y2), Z3 is Z2+1, publicationYear(Y3,Z3), not(Y2=Y3), not(Y1=Y3).
+% output:
+
+% QUERY 9 ---------- 
+% input: publishedBy(Publisher, Book), publicationYear(Book, 1995), publishedBy(Publisher, Book2), publicationYear(Book2, 1995), (not Book = Book2 ; Book = Book2).
+% output:
+
+% QUERY 10 ---------- 
+% input:
+% output:
