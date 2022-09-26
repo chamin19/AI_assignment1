@@ -35,12 +35,13 @@ publishedBy('Springer Nature','Brida').
 publishedBy('Warner Bros','The Cuckoos Calling').
 publishedBy('Warner Bros','The Silk Worm').
 publishedBy('Warner Bros','Career Of Evil').
-publishedBy('Warner Bros','Carrie').
+% i think we can remove this one: publishedBy('Warner Bros','Carrie').
 publishedBy('Warner Bros','A Wild Sheep Chase').
 publishedBy('Mac Millan Publishers','Barneys Version').
-publishedBy('Mac Millan Publishers','Carrie').
+% this can be removed: publishedBy('Mac Millan Publishers','Carrie').
 publishedBy('Mac Millan Publishers','The Apprenticeship of Duddy Kravitz').
 publishedBy('Harper Collins','Carrie').
+
 
 %%%%% ATOMIC: publicationYear
 % Add the atomic propositions for publicationYear in this section
@@ -53,9 +54,9 @@ publicationYear('Station Eleven', 1995).
 publicationYear('The Cuckoos Calling',2013).
 publicationYear('The Silk Worm',2014).
 publicationYear('Career Of Evil',2015).
+publicationYear('The Apprenticeship of Duddy Kravitz',1977).
 publicationYear('Carrie',1974).
 publicationYear('Barneys Version',1995).
-publicationYear('The Apprenticeship of Duddy Kravitz',1977).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
