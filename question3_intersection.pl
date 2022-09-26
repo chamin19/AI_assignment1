@@ -70,4 +70,3 @@ canGo(Car, Direction) :- facing(Car,Direction), lightColour(Direction,red), cloc
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
-
