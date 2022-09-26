@@ -35,7 +35,7 @@ publishedBy('Springer Nature','Brida').
 publishedBy('Warner Bros','The Cuckoos Calling').
 publishedBy('Warner Bros','The Silk Worm').
 publishedBy('Warner Bros','Career Of Evil').
-% i think we can remove this one: publishedBy('Warner Bros','Carrie').
+publishedBy('Warner Bros','Carrie').
 publishedBy('Warner Bros','A Wild Sheep Chase').
 publishedBy('Mac Millan Publishers','Barneys Version').
 publishedBy('Mac Millan Publishers','The Apprenticeship of Duddy Kravitz').
