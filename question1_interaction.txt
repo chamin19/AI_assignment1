@@ -35,7 +35,7 @@ Yes (0.00s cpu)
 % input: publicationYear(Book,2019),publishedBy(Publisher,Book), not (Publisher = 'Random House'), not (Publisher = 'Harper Collins').
 
 % output:
-?- publicationYear(Book, 2019), publishedBy(Publisher, Book), not Publisher = 'Random House', not Publisher = 'Harper Collins'.
+?- publicationYear(Book, 2019), publishedBy(Publisher, Book), not (Publisher = 'Random House'), not (Publisher = 'Harper Collins').
 Book = 'The Alchemist'
 Publisher = 'Penguin'
 Yes (0.00s cpu, solution 1, maybe more)
