@@ -51,33 +51,21 @@ lightColour(west, red).
 %%%%% RULE: canGo
 % Add the rules for canGo in this section
 
-% DONE -------------------------------
+
 % A car can go straight through an intersection or turn right on a green light.
-% canGo(Car,Direction) :- lightColour(Direction,green), facing(Car, Direction).
-% canGo(Car,Direction) :- lightColour(Direction2,green), facing(Car,Direction2), clockwise(Direction,Direction2).
+canGo(Car,Direction) :- lightColour(Direction,green), facing(Car, Direction).
+canGo(Car,Direction) :- lightColour(Direction2,green), facing(Car,Direction2), clockwise(Direction,Direction2).
 
-canGo(Car,Direction) :- lightColour(Direction,green), facing(Car, Direction) ; lightColour(Direction2,green), facing(Car,Direction2), clockwise(Direction,Direction2).
-
-% canGo(Car,Direction) :- \+ ((\+ (lightColour(Direction, green), facing(Car, Direction))), (\+ (lightColour(Direction2,green), facing(Car,Direction2), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction), not(Direction=Direction2)))).
-
-
-% DONE -------------------------------
 % A car can turn left on a green light if there is no car that is coming in the opposite direction.
-% Note that for this assignment, we do not distinguish between if the car coming in the opposite
-% direction is turning or not.
-
 canGo(Car,Direction) :- lightColour(Direction2,green), clockwise(Direction2,Direction), reverseDirection(Direction2,OppositeDirection), not(facing(Car2,OppositeDirection)), not(canGo(Car2,OppositeDirection)).
 
-% DONE ---------------------------
 % A car can turn right on a yellow light.
 canGo(Car, Direction) :- lightColour(Direction2,yellow), facing(Car,Direction2), reverseDirection(Direction3,Direction2), clockwise(Direction3,Direction), not(Direction=Direction2). 
 
-% DONE -------------------------------
 % A car can turn left on a yellow light. Note, that we are assuming traffic coming in the opposite
 % direction has stopped when the light is yellow.
 canGo(Car,Direction) :- lightColour(Direction2,yellow), clockwise(Direction2,Direction), reverseDirection(Direction2,OppositeDirection), not(facing(Car2,OppositeDirection)), not(canGo(Car2,OppositeDirection)).
 
-% DONE--------------------------------
 % A car can turn right on a red light, if there is no car coming in on the left that can travel straight (ie. you must yield to oncoming traffic).
 canGo(Car, Direction) :- facing(Car,Direction), lightColour(Direction,red), clockwise(DirectionOfRightTurn,Direction), not(facing(Car2, DirectionOfRightTurn)), not(canGo(Car2,Direction)).
 
