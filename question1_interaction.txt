@@ -109,5 +109,12 @@ Yes (0.03s cpu, solution 2, maybe more)
 No (0.05s cpu)
 
 % QUERY 10 ---------- 
-% input:
+% input: publishedBy('Mac Millan Publishers',Book1), publicationYear(Book1,EarliestYear), \+ (publishedBy('Mac Millan Publishers',Book2), publicationYear(Book2,Year), \+ (Book1=Book2), EarliestYear > Year).
+
 % output:
+?- publishedBy('Mac Millan Publishers', Book1), publicationYear(Book1, EarliestYear), \+ (publishedBy('Mac Millan Publishers', Book2), publicationYear(Book2, Year), \+ Book1 = Book2, EarliestYear > Year).
+Book1 = 'The Apprenticeship of Duddy Kravitz'
+EarliestYear = 1977
+Book2 = Book2
+Year = Year
+Yes (0.00s cpu)

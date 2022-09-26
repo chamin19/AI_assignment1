@@ -38,7 +38,6 @@ publishedBy('Warner Bros','Career Of Evil').
 % i think we can remove this one: publishedBy('Warner Bros','Carrie').
 publishedBy('Warner Bros','A Wild Sheep Chase').
 publishedBy('Mac Millan Publishers','Barneys Version').
-% this can be removed: publishedBy('Mac Millan Publishers','Carrie').
 publishedBy('Mac Millan Publishers','The Apprenticeship of Duddy Kravitz').
 publishedBy('Harper Collins','Carrie').
 
@@ -55,7 +54,6 @@ publicationYear('The Cuckoos Calling',2013).
 publicationYear('The Silk Worm',2014).
 publicationYear('Career Of Evil',2015).
 publicationYear('The Apprenticeship of Duddy Kravitz',1977).
-publicationYear('Carrie',1974).
 publicationYear('Barneys Version',1995).
 
 %%%%% END
