@@ -9,27 +9,31 @@
 % Add your interaction below
 
 
-% input: costAfterTax(apple, AfterTax).
+% input: costAfterTax(apple, Apple_Cost_AfterTax), costAfterTax(chocolate_bar, CB_Cost_AfterTax).
 % output:
-AfterTax = 5.5
+Apple_Cost_AfterTax = 5.5
+CB_Cost_AfterTax = 1.6500000000000001
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
 
-% input: costAfterTax(ginger_ale, AfterTax).
+% input: costAfterTaxAndSale(lettuce, Lettuce_Cost_AfterSaleAndTax), costAfterTaxAndSale(ginger_ale, GA_Cost_AfterSaleAndTax).
 % output:
-AfterTax = 2.2
-Yes (0.00s cpu)
-
-% input: costAfterTaxAndSale(chocolate_bar, AfterSaleAndTax).
-% output:
-AfterSaleAndTax = 4.95
-Yes (0.00s cpu)
-
-% input: costAfterTaxAndSale(bread, AfterSaleAndTax).
-% output:
-AfterSaleAndTax = 4.5
+?- costAfterTaxAndSale(lettuce, Lettuce_Cost_AfterSaleAndTax), costAfterTaxAndSale(ginger_ale, GA_Cost_AfterSaleAndTax).
+Lettuce_Cost_AfterSaleAndTax = 7.5
+GA_Cost_AfterSaleAndTax = 4.4
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
+
+% input: costAfterTaxAndSale(bread, Bread_Cost_AfterSaleAndTax).
+% output:
+Bread_Cost_AfterSaleAndTax = 4.5
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+% input: costAfterTaxAndSale(chocolate_bar, CB_Cost_AfterSaleAndTax).
+% output:
+CB_Cost_AfterSaleAndTax = 4.95
+Yes (0.00s cpu)
 
 % input: totalCost(Cost).
 % output:
