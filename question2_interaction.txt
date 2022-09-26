@@ -9,7 +9,6 @@
 % Add your interaction below
 
 
-
 % input: costAfterTax(apple, AfterTax).
 % output:
 AfterTax = 5.5
@@ -37,4 +36,3 @@ No (0.00s cpu)
 Cost = 32.35
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
-

@@ -51,7 +51,6 @@ lightColour(west, red).
 %%%%% RULE: canGo
 % Add the rules for canGo in this section
 
-
 % A car can go straight through an intersection or turn right on a green light.
 canGo(Car,Direction) :- lightColour(Direction,green), facing(Car, Direction).
 canGo(Car,Direction) :- lightColour(Direction2,green), facing(Car,Direction2), clockwise(Direction,Direction2).
