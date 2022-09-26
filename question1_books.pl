@@ -55,6 +55,7 @@ publicationYear('The Silk Worm',2014).
 publicationYear('Career Of Evil',2015).
 publicationYear('The Apprenticeship of Duddy Kravitz',1977).
 publicationYear('Barneys Version',1995).
+publicationYear('Carrie',1974).
 
 %%%%% END
 % DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
