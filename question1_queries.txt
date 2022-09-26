@@ -28,11 +28,7 @@ QUERY 2: publishedBy(Publisher,'Station Eleven').
 QUERY 3: authorOf(Author,'The Apprenticeship of Duddy Kravitz'),authorOf(Author,'Barneys Version').
 
 % Was there a book published in 2019 that was not published by Random House or Harper Collins? 
-<<<<<<< HEAD
-QUERY 4: ?-publicationYear(Book,2019),publishedBy(Publisher,Book), not (Publisher = 'Random House'), not (Publisher = 'Harper Collins').
-=======
 QUERY 4: publicationYear(Book,2019),publishedBy(Publisher,Book), not (Publisher = 'Random House'), not (Publisher = 'Harper Collins').
->>>>>>> b569b30bbf8f0358b8a49b15b242ff58bd29b31b
 
 % Did any author write at least two different books, each with a different publisher?
 QUERY 5: authorOf(Author,Book1), authorOf(Author,Book2), not(Book1=Book2), publishedBy(Publisher1,Book1), publishedBy(Publisher2,Book2), not(Publisher1=Publisher2).
