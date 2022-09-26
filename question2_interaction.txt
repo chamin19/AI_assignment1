@@ -11,6 +11,7 @@
 
 % input: costAfterTax(apple, Apple_Cost_AfterTax), costAfterTax(chocolate_bar, CB_Cost_AfterTax).
 % output:
+?- costAfterTax(apple, Apple_Cost_AfterTax), costAfterTax(chocolate_bar, CB_Cost_AfterTax).
 Apple_Cost_AfterTax = 5.5
 CB_Cost_AfterTax = 1.6500000000000001
 Yes (0.00s cpu, solution 1, maybe more)
@@ -26,17 +27,20 @@ No (0.00s cpu)
 
 % input: costAfterTaxAndSale(bread, Bread_Cost_AfterSaleAndTax).
 % output:
+?- costAfterTaxAndSale(bread, Bread_Cost_AfterSaleAndTax).
 Bread_Cost_AfterSaleAndTax = 4.5
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
 
 % input: costAfterTaxAndSale(chocolate_bar, CB_Cost_AfterSaleAndTax).
 % output:
+?- costAfterTaxAndSale(chocolate_bar, CB_Cost_AfterSaleAndTax).
 CB_Cost_AfterSaleAndTax = 4.95
 Yes (0.00s cpu)
 
 % input: totalCost(Cost).
 % output:
+?- totalCost(Cost).
 Cost = 32.35
 Yes (0.00s cpu, solution 1, maybe more)
 No (0.00s cpu)
