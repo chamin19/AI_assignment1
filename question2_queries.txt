@@ -24,7 +24,7 @@ QUERY 2: costAfterTaxAndSale(lettuce, Lettuce_Cost_AfterSaleAndTax), costAfterTa
 % Calculates cost for non-taxable, on-sale, even quantity item bread
 QUERY 3: costAfterTaxAndSale(bread, Bread_Cost_AfterSaleAndTax).
 
-% Calculates cost for taxable, on-sale and odd quantity item chocolate bar
+% Calculates cost for taxable, on-sale, odd quantity item chocolate bar
 QUERY 4: costAfterTaxAndSale(chocolate_bar, CB_Cost_AfterSaleAndTax).
 
 % Calculates the total bill of the grocery shopping 
