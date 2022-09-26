@@ -30,17 +30,16 @@ authorOf('Stephen King','Carrie').
 %%%%%  ATOMIC: publishedBy
 % Add the atomic propositions for publishedBy in this section
 publishedBy('Penguin','The Alchemist').
+publishedBy('Penguin','Station Eleven').
 publishedBy('Springer Nature','Brida').
 publishedBy('Warner Bros','The Cuckoos Calling').
 publishedBy('Warner Bros','The Silk Worm').
 publishedBy('Warner Bros','Career Of Evil').
 publishedBy('Warner Bros','Carrie').
+publishedBy('Warner Bros','A Wild Sheep Chase').
 publishedBy('Mac Millan Publishers','Barneys Version').
 publishedBy('Mac Millan Publishers','Carrie').
 publishedBy('Mac Millan Publishers','The Apprenticeship of Duddy Kravitz').
-publishedBy('Harper Collins','Carrie').
-publishedBy('Penguin','Station Eleven').
-publishedBy('Warner Bros','A Wild Sheep Chase').
 publishedBy('Harper Collins','Carrie').
 
 %%%%% ATOMIC: publicationYear
