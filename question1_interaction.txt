@@ -1,13 +1,3 @@
-% Enter the names of your group members below.
-% If you only have 2 group members, leave the last space blank
-%
-%%%%%
-%%%%% NAME: Camillia Amin 
-%%%%% NAME: Rudaba Syed
-%%%%% NAME: Mayra Mussarrat
-%
-% Add your interaction below
-
 % QUERY 1 ---------- 
 % input: authorOf('Chimamanda Ngozi Adichie', 'Half of a Yellow Sun').
 
