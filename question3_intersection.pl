@@ -1,16 +1,3 @@
-% Enter the names of your group members below.
-% If you only have 2 group members, leave the last space blank
-%
-%%%%%
-%%%%% NAME: Camillia Amin 
-%%%%% NAME: Rudaba Syed
-%%%%% NAME: Mayra Mussarrat
-%
-% Add the required atomic propositions and rules in the corresponding sections. 
-% If you put the propositions and rules in the wrong sections, you may lose marks.
-%
-% You may add additional comments as you choose but DO NOT MODIFY the comment lines below
-
 %%%%% ATOMIC: clockwise
 % Add the atomic propositions for clockwise (part a) in this section
 clockwise(east, north). 
@@ -69,4 +56,3 @@ canGo(Car,Direction) :- lightColour(Direction2,yellow), clockwise(Direction2,Dir
 canGo(Car, Direction) :- facing(Car,Direction), lightColour(Direction,red), clockwise(DirectionOfRightTurn,Direction), not(facing(Car2, DirectionOfRightTurn)), not(canGo(Car2,Direction)).
 
 %%%%% END
-% DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW

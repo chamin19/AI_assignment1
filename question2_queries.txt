@@ -1,13 +1,5 @@
-% Enter the names of your group members below.
-% If you only have 2 group members, leave the last space blank
-%
-%%%%%
-%%%%% NAME: Camillia Amin 
-%%%%% NAME: Rudaba Syed
-%%%%% NAME: Mayra Mussarrat
-%
 % Add your 5 queries below. Ensure that the line before each query describes the query in plain
-% English.For example, if you want to add the query "pred(X, constant).", it should appear as follows:
+% English. For example, if you want to add the query "pred(X, constant).", it should appear as follows:
 % 
 % % Retrieves the block that is on top of blockA
 % QUERY 2: on(X, blockA).
@@ -31,4 +23,3 @@ QUERY 4: costAfterTaxAndSale(chocolate_bar, CB_Cost_AfterSaleAndTax).
 QUERY 5: totalCost(Cost).
 
 %%%%% END
-% DO NOT PUT ANY ATOMIC PROPOSITIONS OR LINES BELOW
